@@ -1,0 +1,145 @@
+body {
+    /* Richer coral-to-peach sunset gradient */
+    background: linear-gradient(135deg, rgb(255, 153, 133) 0%, rgb(255, 118, 138) 100%);
+    min-height: 100vh;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #2b2d42;
+    padding-bottom: 80px; /* Prevents fixed footer from covering content */
+}
+
+/* Frosted Glass Navbar & Footer */
+nav, footer {
+    background-color: rgba(148, 183, 207, 0.92) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-nav .nav-link p {
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover p {
+    transform: translateY(-2px);
+    opacity: 0.85;
+}
+
+/* Main Headings */
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2.8rem, 7vw, 5rem) !important; /* Scales cleanly on mobile & desktop */
+    color: #ffffff;
+    text-shadow: 0 4px 15px rgba(180, 60, 60, 0.25);
+    margin-left: 0; /* Fixes off-center alignment */
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.92);
+    letter-spacing: 0.5px;
+}
+
+h3 {
+    color: rgb(174, 250, 255);
+}
+
+p {
+    color: white;
+}
+
+/* Glassmorphism Form Container */
+form {
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 24px;
+    padding: 2.5rem 2rem;
+    max-width: 540px;
+    margin: 1.5rem auto;
+    box-shadow: 0 15px 35px rgba(160, 60, 60, 0.15);
+}
+
+/* Styled Country Dropdown */
+select#country {
+    width: 100% !important;
+    max-width: 420px;
+    font-size: 1.35rem !important;
+    font-weight: 600;
+    color: #2b2d42;
+    background-color: #ffffff;
+    border: 2px solid transparent;
+    border-radius: 14px !important;
+    padding: 12px 18px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    outline: none;
+}
+
+select#country:hover, select#country:focus {
+    border-color: rgb(148, 183, 207);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transform: translateY(-1px);
+}
+
+/* Elevated Action Button */
+input.btn-light {
+    width: 100% !important;
+    max-width: 300px;
+    padding: 12px 24px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #d94e67;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(180, 60, 75, 0.2);
+    transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+input.btn-light:hover {
+    background-color: #fff8f9;
+    color: #c03952;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(180, 60, 75, 0.3);
+}
+
+input.btn-light:active {
+    transform: translateY(0);
+}
+
+/* Result Nickname Badge */
+#result {
+    background: linear-gradient(135deg, rgb(252, 120, 188), rgb(238, 85, 165)) !important;
+    color: white !important;
+    font-size: 1.3rem !important;
+    font-weight: 700;
+    width: 100% !important;
+    max-width: 380px;
+    margin-top: 20px !important;
+    padding: 16px 20px;
+    border-radius: 16px !important;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 25px rgba(238, 85, 165, 0.35);
+    animation: popIn 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Hides the pink box until PyScript outputs a nickname */
+#result:empty {
+    display: none;
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9) translateY(8px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}

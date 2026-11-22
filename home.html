@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <title></title>
+</head>
+
+<body>
+
+
+     <nav class="navbar navbar-expand-sm  border-bottom  border-secondary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>    
+
+        <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link text-light" href="members.html" target="_self"><p>Members</p></a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="checker.html" target="_self"><p>Element checker</p></a> </li>
+                    <li class="nav-item"><a class="nav-link text-light" href="home.html" target="_self"><p>Home</p></a> </li>
+                    <li class="nav-item"><a class="nav-link text-light" href="index.html" target="_self"><p>About me</p></a> </li>
+                    </ul>
+           
+        </div>
+    </nav><br><br>
+    <center>
+                <h1 style="font-size: 80px;">The Nickname</h1>
+                <h2>Atlas of Southeast Asia</h2>
+            
+    </center>
+     <form>
+        <center>
+           
+
+   
+
+                <label for="country" style="color: white;"><h2>Select a country</h2></label><br>   
+        <select  id="country" style="width: 450px; font-size: 30px; border-radius: 10px;">
+            <center>
+            <option value="Pearl of the Orient Seas🫧">Philippines</option>
+            <option value="The Land of the Rising Sun🌄">Japan</option>
+            <option value="Land of the Morning Calm🕊️">Korea</option>
+            <option value="The Garden City🌱">Singapore</option>
+            <option value="The Red Dragon🐉">China</option>
+            </center>
+        </select><br><br>
+
+      
+
+
+         <input class="btn btn-light" type="button" py-click="finding_nickname" value="Find nickname" style="width: 300px; margin-top: 10px;"><br>
+
+          <div id="result" style="background-color: rgb(252, 120, 188); color: white; font-size: 20px; margin-top: 10px; width: 250px; border-radius: 10px;"></div>
+        </div>
+        </center>
+    </div>
+
+</center>
+    </form><br>
+    <div id="div1"></div>
+    <py-script src="main.py"></py-script>
+    <link rel="stylesheet" href="styles.css">
+
+    <footer class="text-center py-3 text-light mt-auto fixed-bottom" >
+    &copy; 2025 Copyright
+</footer>
+</body>
+</html>
